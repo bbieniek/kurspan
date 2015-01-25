@@ -5,6 +5,7 @@
 * checking for file 'bbhw6/DESCRIPTION' ... OK
 * checking extension type ... Package
 * this is package 'bbhw6' version '1.0'
+* package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: 'Baltazar Bieniek <baltazar@bieniek.org.pl>'
 New submission
@@ -16,9 +17,10 @@ New submission
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'bbhw6' can be installed ... [17s] OK
+* checking whether package 'bbhw6' can be installed ... [25s] OK
 * checking installed package size ... OK
 * checking package directory ... OK
+* checking 'build' directory ... OK
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... OK
 * checking for left-over files ... OK
@@ -45,9 +47,7 @@ New submission
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
 * checking R code for possible problems ... OK
-* checking Rd files ... WARNING
-bbhw6-package.Rd: non-ASCII input and no declared encoding
-problem found in 'bbhw6-package.Rd'
+* checking Rd files ... OK
 * checking Rd metadata ... OK
 * checking Rd line widths ... OK
 * checking Rd cross-references ... OK
@@ -61,7 +61,21 @@ problem found in 'bbhw6-package.Rd'
 * checking compilation flags in Makevars ... OK
 * checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
 * checking compiled code ... OK
+ WARNING
+'qpdf' is needed for checks on size reduction of PDFs
+* checking installed files from 'inst/doc' ... OK
+* checking files in 'vignettes' ... OK
 * checking examples ... NONE
+* checking for unstated dependencies in tests ... OK
+* checking tests ...
+** running tests for arch 'i386' ... OK
+  Running 'testthat.R'
+** running tests for arch 'x64' ... OK
+  Running 'testthat.R'
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in 'inst/doc' ... OK
+* checking running R code from vignettes ... OK
+* checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... WARNING
 LaTeX errors when creating PDF version.
 This typically indicates Rd problems.
@@ -69,49 +83,49 @@ LaTeX errors found:
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.30 ...�’package}{bbhw6}{bbhw6â’package}
+l.34 ...A{bbhw6−package}{bbhw6}{bbhw6−package}
                                                   
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -119,81 +133,81 @@ Type  H <return>  for immediate help.
 ! Use of \@item doesn't match its definition.
 \DeclareInputText #1#2->\def \reserved@a ##
                                            1 ${}\def \reserved@b {#2}\ifcat ...
-l.54 \item[\code{max}]
-                       ....
-! Incomplete \iffalse; all text was ignored after line 54.
+l.50 mode(x)
+            
+! Incomplete \iffalse; all text was ignored after line 50.
 <inserted text> 
                 \fi 
-l.54 \item[\code{max}]
-                       ....
-! Incomplete \iffalse; all text was ignored after line 54.
+l.50 mode(x)
+            
+! Incomplete \iffalse; all text was ignored after line 50.
 <inserted text> 
                 \fi 
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Use of \@item doesn't match its definition.
 \DeclareInputText #1#2->\def \reserved@a ##
                                            1 ${}\def \reserved@b {#2}\ifcat ...
-l.54 \item[\code{max}]
-                       ....
-! Incomplete \iffalse; all text was ignored after line 54.
+l.50 mode(x)
+            
+! Incomplete \iffalse; all text was ignored after line 50.
 <inserted text> 
                 \fi 
-l.54 \item[\code{max}]
-                       ....
-! Incomplete \iffalse; all text was ignored after line 54.
+l.50 mode(x)
+            
+! Incomplete \iffalse; all text was ignored after line 50.
 <inserted text> 
                 \fi 
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 ! Forbidden control sequence found while scanning text of \write.
 <inserted text> 
                 }
-l.54 \item[\code{max}]
-                       ....
+l.50 mode(x)
+            
 * checking PDF version of manual without hyperrefs or index ... ERROR

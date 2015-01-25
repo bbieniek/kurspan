@@ -2,7 +2,7 @@
 \documentclass[a4paper]{book}
 \usepackage[times,inconsolata,hyper]{Rd}
 \usepackage{makeidx}
-\usepackage[utf8,latin1]{inputenc}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
 % \usepackage{graphicx} % @USE GRAPHICX@
 \makeindex{}
 \begin{document}
@@ -13,6 +13,7 @@
 \end{center}
 \begin{description}
 \raggedright{}
+\inputencoding{utf8}
 \item[Type]\AsIs{Package}
 \item[Title]\AsIs{Runs functions for homework 6 for PAN course}
 \item[Version]\AsIs{1.0}
@@ -23,17 +24,42 @@
 \item[License]\AsIs{GPL (>= 2)}
 \item[Imports]\AsIs{Rcpp (>= 0.11.3)}
 \item[LinkingTo]\AsIs{Rcpp}
+\item[Suggests]\AsIs{testthat, knitr}
+\item[Encoding]\AsIs{UTF-8}
+\item[VignetteBuilder]\AsIs{knitr}
 \item[Archs]\AsIs{i386, x64}
 \end{description}
 \Rdcontents{\R{} topics documented:}
 \inputencoding{utf8}
-\HeaderA{bbhw6â’package}{bbhw6}{bbhw6â’package}
-\aliasA{bbhw6â’package}{bbhw6C"Bb}{bbhw6â’package}
-\aliasA{bbhw6â’package-package}{bbhw6C"Bb}{bbhw6C"Bb}
+\HeaderA{bbhw6−package}{bbhw6}{bbhw6−package}
+\aliasA{bbhw6−package}{bbhw6bpackage}{bbhw6−package}
+\aliasA{bbhw6−package-package}{bbhw6bpackage}{bbhw6bpackage.Rdash.package}
 %
 \begin{Description}\relax
 Runs the homework 6
 \end{Description}
+\inputencoding{utf8}
+\HeaderA{mode}{mode}{mode}
+%
+\begin{Description}\relax
+The function calculates a mode of a given integer vector
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+mode(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] IntegerVector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Integer value - mode of a vector
+\end{Value}
 \inputencoding{utf8}
 \HeaderA{test}{...}{test}
 %
