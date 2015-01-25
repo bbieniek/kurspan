@@ -16,4 +16,5 @@ BuildType: Package
 PackageUseDevtools: Yes
 PackagePath: bbhw6
 PackageInstallArgs: --no-multiarch --with-keep.source
+PackageCheckArgs: --as-cran
 PackageRoxygenize: rd,collate,namespace

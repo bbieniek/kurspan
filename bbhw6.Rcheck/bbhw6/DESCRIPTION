@@ -9,4 +9,6 @@ Description: Complex functions
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.3)
 LinkingTo: Rcpp
-Suggests: testthat
+Packaged: 2015-01-25 11:31:27 UTC; balta_000
+Built: R 3.1.0; x86_64-w64-mingw32; 2015-01-25 11:31:38 UTC; windows
+Archs: i386, x64
