@@ -5,14 +5,16 @@
 
 using namespace Rcpp;
 
-// rcpp_hello_world
-List rcpp_hello_world();
-RcppExport SEXP bbhw6_rcpp_hello_world() {
+// test
+double test(double min = 0.0, double max = 1.0);
+RcppExport SEXP bbhw6_test(SEXP minSEXP, SEXP maxSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List __result = rcpp_hello_world();
+        Rcpp::traits::input_parameter< double >::type min(minSEXP );
+        Rcpp::traits::input_parameter< double >::type max(maxSEXP );
+        double __result = test(min, max);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);
