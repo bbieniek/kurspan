@@ -12,15 +12,25 @@ mode <- function(x) {
     .Call('bbhw6_mode', PACKAGE = 'bbhw6', x)
 }
 
-#' @title ...
-#' @description ...
+#' @title perms
+#' @description The function generates all possible combinations of a given vector
 #'
-#' @param min ...
-#' @param max ....
-#' @return ....
+#' @param x input vector
+#' @return Matrix - the matrix that represents all possible permutations
 #'
 #' @export
-test <- function(min = 0.0, max = 1.0) {
-    .Call('bbhw6_test', PACKAGE = 'bbhw6', min, max)
+perms <- function(x) {
+    .Call('bbhw6_perms', PACKAGE = 'bbhw6', x)
+}
+
+#' @title simplify2array
+#' @description The function simplifies a list of numeric vectors into a numeric vector
+#'
+#' @param x List - expecting a list of numeric vectors
+#' @return NumericVector - a list of numeric vectors
+#'
+#' @export
+simplify2array <- function(x) {
+    .Call('bbhw6_simplify2array', PACKAGE = 'bbhw6', x)
 }
 

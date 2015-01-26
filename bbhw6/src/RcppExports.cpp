@@ -20,16 +20,30 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
-// test
-double test(double min = 0.0, double max = 1.0);
-RcppExport SEXP bbhw6_test(SEXP minSEXP, SEXP maxSEXP) {
+// perms
+NumericMatrix perms(IntegerVector x);
+RcppExport SEXP bbhw6_perms(SEXP xSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        Rcpp::traits::input_parameter< double >::type min(minSEXP );
-        Rcpp::traits::input_parameter< double >::type max(maxSEXP );
-        double __result = test(min, max);
+        Rcpp::traits::input_parameter< IntegerVector >::type x(xSEXP );
+        NumericMatrix __result = perms(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// simplify2array
+NumericVector simplify2array(List x);
+RcppExport SEXP bbhw6_simplify2array(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        NumericVector __result = simplify2array(x);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

@@ -30,14 +30,49 @@ x<-sample(1:1000, replace=TRUE, 100000)
 microbenchmark(mode(x), modeR(x))
 ```
 
+## Simplify2array function
 
-## Styles
+To compare the performance against R, we used unlist function
 
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
 
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
+The benchmark for the function is as follows:
+```{r}
+require(microbenchmark)
+x<-replicate(1000, sample(1:100,size=10), simplify=FALSE)
+microbenchmark(simplify2array(x), unlist(x))
+x<-replicate(10000, sample(1:100,size=100), simplify=FALSE)
+microbenchmark(simplify2array(x), unlist(x))
+```
+
+
+## Perms
+
+The following R function has been used to generate all permutations of a given vector:
+
+```{r}
+permutations <- function(n){
+    if(n==1){
+        return(matrix(1))
+    } else {
+        sp <- permutations(n-1)
+        p <- nrow(sp)
+        A <- matrix(nrow=n*p,ncol=n)
+        for(i in 1:n){
+            A[(i-1)*p+1:p,] <- cbind(i,sp+(sp>=i))
+        }
+        return(A)
+    }
+}
+```
+
+The benchmark for the function is as follows:
+```{r}
+require(microbenchmark)
+x<-replicate(5, sample(1:100,size=3), simplify=FALSE)
+microbenchmark(lapply(x, bbhw6::perms), lapply(x,permutations))
+x<-replicate(10, sample(1:100,size=4), simplify=FALSE)
+microbenchmark(lapply(x, bbhw6::perms), lapply(x,permutations))
+```
 
 ## Figures
 
