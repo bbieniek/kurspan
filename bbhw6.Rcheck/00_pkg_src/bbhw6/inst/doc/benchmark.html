@@ -70,18 +70,18 @@ code > span.er { color: #ff0000; font-weight: bold; }
 x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dv">100000</span>)
 <span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
-##            expr      min       lq     mean   median        uq       max
-##  bbhw6::mode(x) 53.34588 57.03100  60.8672  59.3062  62.96031  91.57331
-##        modeR(x) 84.48912 93.69143 111.6839 103.9507 132.33276 162.87936
+##            expr      min        lq      mean   median        uq      max
+##  bbhw6::mode(x) 62.72960  72.76282  78.95896  78.7372  83.46565 104.6667
+##        modeR(x) 98.26525 119.70682 139.77095 132.2518 161.30990 212.5000
 ##  neval
 ##    100
 ##    100</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dv">100000</span>)
 <span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
-##            expr       min       lq     mean   median       uq      max
-##  bbhw6::mode(x) 511.31775 633.9593 676.9567 692.4027 740.3044 801.3427
-##        modeR(x)  91.73307 125.0013 141.6362 139.2376 153.2466 240.9880
+##            expr       min        lq     mean   median       uq      max
+##  bbhw6::mode(x) 502.45303 527.14440 609.3826 574.1875 678.2252 971.5222
+##        modeR(x)  90.25688  96.93186 125.2514 124.3184 141.2992 243.3076
 ##  neval
 ##    100
 ##    100</code></pre>
@@ -94,21 +94,21 @@ x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">
 x&lt;-<span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">10</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
 <span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
 <pre><code>## Unit: microseconds
-##                      expr     min       lq      mean  median       uq
-##  bbhw6::simplify2array(x) 710.428 736.9795 855.70407 773.349 868.8465
-##                 unlist(x)  66.938  68.9460  96.41668  71.400  83.2255
+##                      expr     min       lq      mean   median       uq
+##  bbhw6::simplify2array(x) 374.403 418.8045 537.22992 452.7195 563.8355
+##                 unlist(x)  39.270  44.6250  65.87997  49.0875  54.4420
 ##       max neval
-##  2754.246   100
-##  2035.340   100</code></pre>
+##  1854.163   100
+##  1460.571   100</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">replicate</span>(<span class="dv">10000</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">100</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
 <span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                      expr       min        lq      mean    median
-##  bbhw6::simplify2array(x) 25.056406 31.923501 39.024162 35.981015
-##                 unlist(x)  5.090357  6.770036  9.813192  7.841925
-##         uq       max neval
-##  40.256522 106.30978   100
-##   8.766998  70.10608   100</code></pre>
+##  bbhw6::simplify2array(x) 21.189663 30.200535 42.897094 33.973343
+##                 unlist(x)  4.661958  5.940014  8.940102  7.118333
+##         uq      max neval
+##  42.304579 95.87470   100
+##   8.758074 62.18205   100</code></pre>
 </div>
 <div id="perms" class="section level2">
 <h2>Perms</h2>
