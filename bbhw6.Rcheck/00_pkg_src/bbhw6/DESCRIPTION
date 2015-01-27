@@ -9,7 +9,7 @@ Description: Complex functions
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.3)
 LinkingTo: Rcpp
-Suggests: testthat, knitr
+Suggests: testthat, knitr, microbenchmark
 Encoding: UTF-8
 VignetteBuilder: knitr
-Packaged: 2015-01-27 20:34:41 UTC; balta_000
+Packaged: 2015-01-27 21:00:11 UTC; balta_000

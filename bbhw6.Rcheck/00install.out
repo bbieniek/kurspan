@@ -1,0 +1,29 @@
+* installing *source* package 'bbhw6' ...
+** libs
+
+*** arch - i386
+g++ -m32 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c RcppExports.cpp -o RcppExports.o
+g++ -m32 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c mode.cpp -o mode.o
+g++ -m32 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c perms.cpp -o perms.o
+g++ -m32 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c simplify2array.cpp -o simplify2array.o
+g++ -m32 -shared -s -static-libgcc -o bbhw6.dll tmp.def RcppExports.o mode.o perms.o simplify2array.o -Ld:/RCompile/CRANpkg/extralibs64/local/lib/i386 -Ld:/RCompile/CRANpkg/extralibs64/local/lib -LC:/PROGRA~1/R/R-31~1.0/bin/i386 -lR
+installing to C:/Users/BALTA_~1/DYSKGO~1/KURSYP~1/ADVANC~1/hw6/hw6/bbhw6/BBHW6~1.RCH/bbhw6/libs/i386
+
+*** arch - x64
+g++ -m64 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c RcppExports.cpp -o RcppExports.o
+g++ -m64 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c mode.cpp -o mode.o
+g++ -m64 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c perms.cpp -o perms.o
+g++ -m64 -std=c++0x -I"C:/PROGRA~1/R/R-31~1.0/include" -DNDEBUG    -I"C:/Users/balta_000/Documents/R/win-library/3.1/Rcpp/include" -I"d:/RCompile/CRANpkg/extralibs64/local/include"  -Wall -pedantic   -O2 -Wall  -mtune=core2 -c simplify2array.cpp -o simplify2array.o
+g++ -m64 -shared -s -static-libgcc -o bbhw6.dll tmp.def RcppExports.o mode.o perms.o simplify2array.o -Ld:/RCompile/CRANpkg/extralibs64/local/lib/x64 -Ld:/RCompile/CRANpkg/extralibs64/local/lib -LC:/PROGRA~1/R/R-31~1.0/bin/x64 -lR
+installing to C:/Users/BALTA_~1/DYSKGO~1/KURSYP~1/ADVANC~1/hw6/hw6/bbhw6/BBHW6~1.RCH/bbhw6/libs/x64
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (bbhw6)

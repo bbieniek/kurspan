@@ -7,7 +7,14 @@ vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   %\usepackage[utf8]{inputenc}
+  %\usepackage[utf8]{microbenchmark}
 ---
+
+```{r,echo=FALSE, message=FALSE,warning=FALSE}
+library(microbenchmark)
+library(bbhw6)
+```
+
 
 This vignette describes the benchmark for the homework 6.
 
@@ -23,11 +30,11 @@ modeR <- function(x) {
 
 The benchmark for the function is as follows:
 ```{r,cache=TRUE}
-require(microbenchmark)
+
 x<-sample(1:100, replace=TRUE, 100000)
-microbenchmark(bbhw6::mode(x), modeR(x))
+microbenchmark::microbenchmark(bbhw6::mode(x), modeR(x))
 x<-sample(1:1000, replace=TRUE, 100000)
-microbenchmark(bbhw6::mode(x), modeR(x))
+microbenchmark::microbenchmark(bbhw6::mode(x), modeR(x))
 ```
 
 ## Simplify2array function
@@ -37,11 +44,11 @@ To compare the performance against R, we used unlist function
 
 The benchmark for the function is as follows:
 ```{r,cache=TRUE}
-require(microbenchmark)
+
 x<-replicate(1000, sample(1:100,size=10), simplify=FALSE)
-microbenchmark(bbhw6::simplify2array(x), unlist(x))
+microbenchmark::microbenchmark(bbhw6::simplify2array(x), unlist(x))
 x<-replicate(10000, sample(1:100,size=100), simplify=FALSE)
-microbenchmark(bbhw6::simplify2array(x), unlist(x))
+microbenchmark::microbenchmark(bbhw6::simplify2array(x), unlist(x))
 ```
 
 
@@ -72,9 +79,9 @@ overallPermutation <- function(x){
 
 The benchmark for the function is as follows:
 ```{r,cache=TRUE}
-require(microbenchmark)
+
 x<-replicate(100, sample(1:100,size=5), simplify=FALSE)
-microbenchmark(lapply(x, bbhw6::perms), lapply(x,overallPermutation))
+microbenchmark::microbenchmark(lapply(x, bbhw6::perms), lapply(x,overallPermutation))
 x<-replicate(100, sample(1:100,size=6), simplify=FALSE)
-microbenchmark(lapply(x, bbhw6::perms), lapply(x,overallPermutation))
+microbenchmark::microbenchmark(lapply(x, bbhw6::perms), lapply(x,overallPermutation))
 ```

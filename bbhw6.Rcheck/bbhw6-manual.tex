@@ -1,0 +1,108 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `bbhw6'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\inputencoding{utf8}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Runs functions for homework 6 for PAN course}
+\item[Version]\AsIs{1.0}
+\item[Date]\AsIs{2015-01-25}
+\item[Author]\AsIs{Baltazar Bieniek}
+\item[Maintainer]\AsIs{Baltazar Bieniek }\email{baltazar@bieniek.org.pl}\AsIs{}
+\item[Description]\AsIs{Complex functions}
+\item[License]\AsIs{GPL (>= 2)}
+\item[Imports]\AsIs{Rcpp (>= 0.11.3)}
+\item[LinkingTo]\AsIs{Rcpp}
+\item[Suggests]\AsIs{testthat, knitr, microbenchmark}
+\item[Encoding]\AsIs{UTF-8}
+\item[VignetteBuilder]\AsIs{knitr}
+\item[Archs]\AsIs{i386, x64}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{bbhw6−package}{bbhw6}{bbhw6−package}
+\aliasA{bbhw6−package}{bbhw6bpackage}{bbhw6−package}
+\aliasA{bbhw6−package-package}{bbhw6bpackage}{bbhw6bpackage.Rdash.package}
+%
+\begin{Description}\relax
+Runs the homework 6
+\end{Description}
+\inputencoding{utf8}
+\HeaderA{mode}{mode}{mode}
+%
+\begin{Description}\relax
+The function calculates a mode of a given integer vector
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+mode(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] IntegerVector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Integer value - mode of a vector
+\end{Value}
+\inputencoding{utf8}
+\HeaderA{perms}{perms}{perms}
+%
+\begin{Description}\relax
+The function generates all possible combinations of a given vector
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+perms(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] input vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Matrix - the matrix that represents all possible permutations
+\end{Value}
+\inputencoding{utf8}
+\HeaderA{simplify2array}{simplify2array}{simplify2array}
+%
+\begin{Description}\relax
+The function simplifies a list of numeric vectors into a numeric vector
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+simplify2array(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] List - expecting a list of numeric vectors
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+NumericVector - a list of numeric vectors
+\end{Value}
+\printindex{}
+\end{document}

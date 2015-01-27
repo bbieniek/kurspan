@@ -1,0 +1,17 @@
+Package: bbhw6
+Type: Package
+Title: Runs functions for homework 6 for PAN course
+Version: 1.0
+Date: 2015-01-25
+Author: Baltazar Bieniek
+Maintainer: Baltazar Bieniek <baltazar@bieniek.org.pl>
+Description: Complex functions
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.11.3)
+LinkingTo: Rcpp
+Suggests: testthat, knitr, microbenchmark
+Encoding: UTF-8
+VignetteBuilder: knitr
+Packaged: 2015-01-27 21:00:11 UTC; balta_000
+Built: R 3.1.0; x86_64-w64-mingw32; 2015-01-27 21:00:25 UTC; windows
+Archs: i386, x64

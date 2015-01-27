@@ -1,0 +1,20 @@
+---
+title: "Homework 6"
+author: "Baltazar Bieniek"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+This is an example package created for the homework 6.
+
+## Package Info
+
+The package contains various function that allow the user to:</br>
+calculate mode</br>
+provides rcpp implementation of simplify2array function</br>
+contains a function to calculate all permutations of a given set</br>
+

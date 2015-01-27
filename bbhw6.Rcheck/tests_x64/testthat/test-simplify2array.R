@@ -1,0 +1,6 @@
+expect_equal(simplify2array(list(c(1,2,3), c(2,3,4))), c(1,2,3,2,3,4))
+expect_equal(simplify2array(list(c(1,2,3), c('a','b'))), c(1,2,3))
+expect_equal(simplify2array(list(c(1,2,3), c('a','b'), c(2,3,4,5))), c(1,2,3,2,3,4,5))
+expect_equal(simplify2array(list(c(1,2,3), c(1))), c(1,2,3,1))
+expect_equal(simplify2array(list(c(1,2,3), c('a','b'))), c(1,2,3))
+expect_equal(simplify2array(list(c())), vector(mode = "numeric"))

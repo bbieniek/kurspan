@@ -66,22 +66,21 @@ code > span.er { color: #ff0000; font-weight: bold; }
   <span class="kw">as.numeric</span>(<span class="kw">names</span>(<span class="kw">table</span>(x))[<span class="kw">which.max</span>(<span class="kw">table</span>(x))]) 
 }</code></pre>
 <p>The benchmark for the function is as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(microbenchmark)
-x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dv">100000</span>)
-<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dv">100000</span>)
+microbenchmark::<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
-##            expr      min       lq     mean   median        uq       max
-##  bbhw6::mode(x) 53.34588 57.03100  60.8672  59.3062  62.96031  91.57331
-##        modeR(x) 84.48912 93.69143 111.6839 103.9507 132.33276 162.87936
+##            expr       min        lq      mean    median        uq      max
+##  bbhw6::mode(x)  58.64196  72.46785  78.53795  77.88999  84.24167 102.9460
+##        modeR(x) 102.81208 128.93279 145.80513 143.76787 161.33378 208.7037
 ##  neval
 ##    100
 ##    100</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dv">100000</span>)
-<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
+microbenchmark::<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">mode</span>(x), <span class="kw">modeR</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
 ##            expr       min       lq     mean   median       uq      max
-##  bbhw6::mode(x) 511.31775 633.9593 676.9567 692.4027 740.3044 801.3427
-##        modeR(x)  91.73307 125.0013 141.6362 139.2376 153.2466 240.9880
+##  bbhw6::mode(x) 531.93577 688.3695 717.5287 712.9980 751.6623 914.9294
+##        modeR(x)  97.84221 130.1481 148.5851 144.3266 167.4213 246.0873
 ##  neval
 ##    100
 ##    100</code></pre>
@@ -90,25 +89,24 @@ x&lt;-<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">
 <h2>Simplify2array function</h2>
 <p>To compare the performance against R, we used unlist function</p>
 <p>The benchmark for the function is as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(microbenchmark)
-x&lt;-<span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">10</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
-<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">10</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
+microbenchmark::<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
 <pre><code>## Unit: microseconds
-##                      expr     min       lq      mean  median       uq
-##  bbhw6::simplify2array(x) 710.428 736.9795 855.70407 773.349 868.8465
-##                 unlist(x)  66.938  68.9460  96.41668  71.400  83.2255
+##                      expr     min      lq       mean  median       uq
+##  bbhw6::simplify2array(x) 427.060 781.158 1002.35461 832.477 982.8625
+##                 unlist(x)  45.072  76.309   94.75221  86.796 103.7530
 ##       max neval
-##  2754.246   100
-##  2035.340   100</code></pre>
+##  4993.967   100
+##   352.536   100</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">replicate</span>(<span class="dv">10000</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">100</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
-<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
+microbenchmark::<span class="kw">microbenchmark</span>(bbhw6::<span class="kw">simplify2array</span>(x), <span class="kw">unlist</span>(x))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                      expr       min        lq      mean    median
-##  bbhw6::simplify2array(x) 25.056406 31.923501 39.024162 35.981015
-##                 unlist(x)  5.090357  6.770036  9.813192  7.841925
+##  bbhw6::simplify2array(x) 23.943909 29.727512 44.193830 35.061073
+##                 unlist(x)  4.557982  5.869283  8.354937  7.019935
 ##         uq       max neval
-##  40.256522 106.30978   100
-##   8.766998  70.10608   100</code></pre>
+##  44.228579 134.29357   100
+##   8.731744  61.37925   100</code></pre>
 </div>
 <div id="perms" class="section level2">
 <h2>Perms</h2>
@@ -131,25 +129,24 @@ overallPermutation &lt;-<span class="st"> </span>function(x){
   <span class="kw">matrix</span>(x[<span class="kw">permutations</span>(<span class="kw">length</span>(x))], <span class="dt">ncol =</span> <span class="kw">length</span>(x))
 }</code></pre>
 <p>The benchmark for the function is as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(microbenchmark)
-x&lt;-<span class="kw">replicate</span>(<span class="dv">100</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">5</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
-<span class="kw">microbenchmark</span>(<span class="kw">lapply</span>(x, bbhw6::perms), <span class="kw">lapply</span>(x,overallPermutation))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">replicate</span>(<span class="dv">100</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">5</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
+microbenchmark::<span class="kw">microbenchmark</span>(<span class="kw">lapply</span>(x, bbhw6::perms), <span class="kw">lapply</span>(x,overallPermutation))</code></pre>
 <pre><code>## Unit: microseconds
 ##                           expr       min         lq      mean    median
-##        lapply(x, bbhw6::perms)   672.943   808.1565  1595.343  1101.565
-##  lapply(x, overallPermutation) 18656.757 22989.8295 26467.123 25075.595
-##         uq      max neval
-##   1255.074 29206.07   100
-##  28902.399 69591.56   100</code></pre>
+##        lapply(x, bbhw6::perms)   675.621   758.6225  1017.304  1030.165
+##  lapply(x, overallPermutation) 16749.491 21021.2040 26089.610 26178.498
+##        uq       max neval
+##   1146.19  3939.036   100
+##  30028.51 43055.839   100</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">replicate</span>(<span class="dv">100</span>, <span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">100</span>,<span class="dt">size=</span><span class="dv">6</span>), <span class="dt">simplify=</span><span class="ot">FALSE</span>)
-<span class="kw">microbenchmark</span>(<span class="kw">lapply</span>(x, bbhw6::perms), <span class="kw">lapply</span>(x,overallPermutation))</code></pre>
+microbenchmark::<span class="kw">microbenchmark</span>(<span class="kw">lapply</span>(x, bbhw6::perms), <span class="kw">lapply</span>(x,overallPermutation))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                           expr       min        lq      mean    median
-##        lapply(x, bbhw6::perms)  2.473556  3.762322  9.977206  4.085405
-##  lapply(x, overallPermutation) 54.615459 60.515087 77.895202 68.277133
-##        uq      max neval
-##   5.36837  59.5001   100
-##  98.16507 151.8949   100</code></pre>
+##        lapply(x, bbhw6::perms)  2.478465  3.184652  4.540641  3.949299
+##  lapply(x, overallPermutation) 55.338828 68.137903 74.898862 71.365396
+##         uq       max neval
+##   4.526968  52.61805   100
+##  78.584581 133.50683   100</code></pre>
 </div>
 
 
