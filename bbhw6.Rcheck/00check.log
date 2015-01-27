@@ -74,7 +74,7 @@ New submission
   Running 'testthat.R'
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in 'inst/doc' ... OK
-* checking running R code from vignettes ... [104s] OK
+* checking running R code from vignettes ... [98s] OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... WARNING
 LaTeX errors when creating PDF version.
