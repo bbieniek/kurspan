@@ -17,7 +17,7 @@ New submission
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'bbhw6' can be installed ... [33s] OK
+* checking whether package 'bbhw6' can be installed ... [31s] OK
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking 'build' directory ... OK
@@ -74,7 +74,7 @@ New submission
   Running 'testthat.R'
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in 'inst/doc' ... OK
-* checking running R code from vignettes ... [102s] OK
+* checking running R code from vignettes ... [104s] OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... WARNING
 LaTeX errors when creating PDF version.
