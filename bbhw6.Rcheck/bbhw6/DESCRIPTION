@@ -12,6 +12,6 @@ LinkingTo: Rcpp
 Suggests: testthat, knitr, microbenchmark
 Encoding: UTF-8
 VignetteBuilder: knitr
-Packaged: 2015-01-27 21:00:11 UTC; balta_000
-Built: R 3.1.0; x86_64-w64-mingw32; 2015-01-27 21:00:25 UTC; windows
+Packaged: 2015-01-27 21:07:35 UTC; balta_000
+Built: R 3.1.0; x86_64-w64-mingw32; 2015-01-27 21:08:03 UTC; windows
 Archs: i386, x64

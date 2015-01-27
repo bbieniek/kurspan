@@ -12,4 +12,4 @@ LinkingTo: Rcpp
 Suggests: testthat, knitr, microbenchmark
 Encoding: UTF-8
 VignetteBuilder: knitr
-Packaged: 2015-01-27 21:00:11 UTC; balta_000
+Packaged: 2015-01-27 21:07:35 UTC; balta_000

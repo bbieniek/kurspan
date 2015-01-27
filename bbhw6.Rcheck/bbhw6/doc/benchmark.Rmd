@@ -10,7 +10,7 @@ vignette: >
   %\usepackage[utf8]{microbenchmark}
 ---
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, message=FALSE,warning=FALSE}
 library(microbenchmark)
 library(bbhw6)
 ```
